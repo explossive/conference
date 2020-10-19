@@ -1,0 +1,1 @@
+REPLACE INTO `user` VALUES (1,'test@test.ru', 'Doe', 'John', '888939555', 'Bell');

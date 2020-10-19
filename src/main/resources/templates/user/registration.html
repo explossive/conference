@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма регистрации на конференцию</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i"
+          rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="header" th:insert="~{fragments/header}"></div>
+<div class="bg-white space-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb20">
+                <a href="/" class="btn btn-primary">Вернуться в список</a>
+                <br><br>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Фамилия</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Фамилия">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="E-mail для уведомлений">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон для уведомлений</label>
+                        <input type="text" class="form-control" id="phone" placeholder="+7(999)999-99-99">
+                    </div>
+                    <div class="form-group">
+                        <label for="subdivision">Подразделение</label>
+                        <input type="text" class="form-control" id="subdivision" placeholder="Подразделение">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="isSpeaker">
+                        <label class="form-check-label" for="isSpeaker">Хочу быть докладчиком</label>
+                    </div>
+                    <div class="speaker-group not-visible">
+                        <div class="form-group">
+                            <label for="topicLecture">Тема доклада</label>
+                            <input type="text" class="form-control" id="topicLecture" placeholder="Тема доклада">
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionLecture">Краткое описание доклада</label>
+                            <textarea class="form-control" id="descriptionLecture" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" id="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/formValidation.js}"></script>
+</body>
+</html>
